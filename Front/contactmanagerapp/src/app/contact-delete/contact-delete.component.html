@@ -1,0 +1,15 @@
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Deletion</h5>
+        <button type="button" class="btn-close" (click)="cancelDelete.emit()"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete {{ contact?.firstName }} {{ contact?.lastName }}?</p>
+        <button class="btn btn-danger" (click)="confirmDelete.emit()">Delete</button>
+        <button class="btn btn-secondary" (click)="cancelDelete.emit()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

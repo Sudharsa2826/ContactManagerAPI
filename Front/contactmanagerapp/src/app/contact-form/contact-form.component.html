@@ -1,0 +1,20 @@
+<div class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ contact ? 'Edit Contact' : 'Add Contact' }}</h5>
+        <button type="button" class="btn-close" (click)="closeForm.emit()"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" id="firstName" class="form-control" [(ngModel)]="contact.firstName" name="firstName" required>
+          </div>
+          <!-- Repeat for other fields -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

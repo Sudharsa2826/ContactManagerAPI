@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Contact List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th (click)="sortContacts('firstName')">First Name</th>
+        <!-- Repeat for other columns -->
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{ contact.firstName }}</td>
+        <!-- Repeat for other columns -->
+        <td>
+          <button class="btn btn-warning btn-sm" (click)="editContact(contact)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteContact(contact)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary" (click)="addContact()">Add New Contact</button>
+
+  <!-- Add/Edit Form Component -->
+  <app-contact-form *ngIf="showForm" [contact]="selectedContact" (closeForm)="closeForm()"></app-contact-form>
+
+  <!-- Delete Confirmation Component -->
+  <app-contact-delete *ngIf="showDelete" [contact]="selectedContact" (confirmDelete)="confirmDelete()" (cancelDelete)="cancelDelete()"></app-contact-delete>
+</div>

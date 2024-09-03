@@ -1,0 +1,25 @@
+/* Adjust navbar padding for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+    .navbar .navbar-brand {
+      font-size: 1.25rem;
+    }
+
+  .container {
+    margin-top: 1rem;
+  }
+}
+
+/* Footer adjustment for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.5rem 0;
+  }
+
+    .footer .text-muted {
+      font-size: 0.875rem;
+    }
+}

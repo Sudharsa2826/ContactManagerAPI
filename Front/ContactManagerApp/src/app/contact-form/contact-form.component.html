@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <h2>{{ contactId ? 'Edit Contact' : 'Add New Contact' }}</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input id="firstName" formControlName="firstName" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input id="lastName" formControlName="lastName" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" class="form-control" type="email" />
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input id="phoneNumber" formControlName="phoneNumber" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input id="address" formControlName="address" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input id="city" formControlName="city" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <input id="state" formControlName="state" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input id="country" formControlName="country" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="postalCode">Postal Code</label>
+      <input id="postalCode" formControlName="postalCode" class="form-control" type="text" />
+    </div>
+    <button type="submit" class="btn btn-primary">{{ contactId ? 'Update' : 'Add' }}</button>
+    <button type="button" class="btn btn-secondary" routerLink="/">Cancel</button>
+  </form>
+</div>

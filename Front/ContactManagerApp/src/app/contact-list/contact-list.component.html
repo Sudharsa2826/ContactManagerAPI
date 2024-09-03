@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <h2>Contact List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th (click)="sort('firstName')">First Name</th>
+        <th (click)="sort('lastName')">Last Name</th>
+        <th (click)="sort('email')">Email</th>
+        <th (click)="sort('phoneNumber')">Phone</th>
+        <th (click)="sort('address')">Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{ contact.firstName }}</td>
+        <td>{{ contact.lastName }}</td>
+        <td>{{ contact.email }}</td>
+        <td>{{ contact.phoneNumber }}</td>
+        <td>{{ contact.address }}, {{ contact.city }}, {{ contact.state }}, {{ contact.country }}, {{ contact.postalCode }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="editContact(contact.id)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteContact(contact.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" routerLink="/add">Add New Contact</button>
+</div>

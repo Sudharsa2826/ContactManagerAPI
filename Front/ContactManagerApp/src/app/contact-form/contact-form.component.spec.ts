@@ -11,7 +11,7 @@ describe('ContactFormComponent', () => {
       imports: [ContactFormComponent]
     })
     .compileComponents();
-
+    
     fixture = TestBed.createComponent(ContactFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

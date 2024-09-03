@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\Front",
     "\\Front\\Contact-manager",
     "\\Front\\Contact-manager\\src",
@@ -11,5 +12,14 @@
     "\\Front\\Contact-manager\\src\\app\\shared"
   ],
   "SelectedNode": "\\Front",
+=======
+    "\\Back",
+    "\\Back\\ContactManagerAPI\\Controllers",
+    "\\Back\\ContactManagerAPI\\Models",
+    "\\Front\\contact-manager",
+    "\\Front\\contact-manager\\src"
+  ],
+  "SelectedNode": "\\Back\\ContactManagerAPI.sln",
+>>>>>>> 55d79fe848e506731334262235276bba2636186b
   "PreviewInSolutionExplorer": false
 }
